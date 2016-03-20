@@ -19,12 +19,13 @@ found in several older games like Quake I and II. Every MPC file starts
 The directory can be located anywhere in the file, but it's a good idea
 to place it at the end. So you'll need only to rewrite the directory and
 not the whole MPC file if you're adding data to it. The directory starts
-with a field containing the number of files in the directory:
+with a field containing the number of files in the directory. Remember
+to add 12 bytes for the file header:
 
     start_of_file + 12 + directory_offset: uint32_t  number of files
 
-The directory itself is just a bunch of entrys, starting right after the
-'number of files' field at:
+The directory itself is just a bunch of entries, starting right after
+the 'number of files' field at:
 
     start_of_file + 12 + directory_offset + 4:  First directory entry
 
