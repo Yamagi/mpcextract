@@ -382,7 +382,7 @@ namespace mpcextract
 }
 
 /*
- * mpcextract a a simple tool to extract the contents of an Monkeystone MPC file
+ * mpcextract is a simple tool to extract the contents of an Monkeystone MPC file
  * (for example from Hyperspace Delivery Boy) into the current working directory.
  */
 int main(int argc, char *argv[])
